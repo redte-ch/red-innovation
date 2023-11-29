@@ -1,0 +1,56 @@
+---
+
+interface Props { //typescript
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="card03">
+    <h1 class="py-2 text-3xl font-bold">{ title }</h1>
+    <div class="column-3">
+        <p class="py-4">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, excepturi tempore! Ullam quae blanditiis dolores harum quos quod, repudiandae officia eum itaque nesciunt. Architecto itaque tenetur excepturi magnam quidem commodi.
+        </p>
+        <p class="py-4">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tempore magnam ullam placeat minima dicta, neque praesentium nesciunt eos culpa et molestias. Consequuntur, quae vero id doloremque maiores repellendus optio.
+        </p>
+        <p class="py-4">
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat voluptatem sit autem vero laborum ipsam doloremque numquam id! Soluta neque repellendus, incidunt pariatur nihil ipsa explicabo minus asperiores ipsum? Modi.
+        </p>
+    </div>
+    
+</div>
+
+
+<style>
+
+    .card03 {
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: var(--color-white);
+        max-width: var(--w-max);
+        overflow: hidden;
+    }
+
+    .column-3 {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+        .column-3 {
+        gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+     }
+    }
+
+    h1 {
+        color: var(--color-black, inherit);
+        border-color:  var(--color-red);
+        border-bottom-width: 6px;
+    }
+
+</style>

@@ -1,0 +1,102 @@
+---
+
+---
+
+<menu class="menu-container">
+  <div class="menu" id="nav-menu">
+
+    <a class="titulo" href="/">RED INNOVATION</a>
+    <nav class="nav">
+      <a class="a-link" href="/">About us</a>
+      <a class="a-link" href="/">Team</a>
+      <a class="a-link" href="/">Contact</a>
+      <a class="a-link" href="/">Legal</a>
+    </nav>
+  </div>
+</menu>
+
+<style>
+  .menu-container {
+    top: 0px;
+    margin: 0px;
+    position: sticky;
+    width: 100%;
+    background: var(--color-darkgray-opac);
+  }
+
+  .menu {
+    margin: 0px auto;
+    max-width: var(--w-max);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .titulo {
+    color: #fff;
+    letter-spacing: 0.08rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  nav .a-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.2s ease;
+  }
+
+  nav .a-link:hover {
+    background-color: var(--color-ligray);
+    color: var(--color-darkgray);
+  }
+
+  .titulo:hover {
+    color: var(--color-red);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .titulo {
+      padding: 0.5rem 1rem;
+    }
+
+    nav .a-link {
+      padding: 0.7rem 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    nav .a-link {
+      padding: 0.4rem 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    nav .a-link {
+      display: none;
+    }
+  }
+</style>

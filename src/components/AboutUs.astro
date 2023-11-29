@@ -1,0 +1,152 @@
+---
+interface Props {
+  //typescript
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="container-about">
+  <div class="a-side">
+    <img class="as-image" src="/images/ri-icono01.svg" />
+    <div class="as-rect"></div>
+  </div>
+
+  <div class="b-side">
+    <div class="bs-container-titulo">
+      <h1 class="bs-titulo">{title}</h1>
+    </div>
+
+    <div class="bs-container-about-p">
+      <p class="bs-about-p">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos beatae ratione sed cumque debitis, autem error deserunt blanditiis laboriosam quibusdam alias sunt, provident placeat, porro assumenda! Cum in magni aut minima dicta repellendus, ducimus neque libero error nulla minus aperiam eligendi nam dolor. A repellat laudantium accusantium veritatis at voluptatum fugit. Error optio ad ducimus ut placeat vitae quo. Sint totam perspiciatis, qui suscipit ducimus odio, expedita nostrum accusantium ea, at neque eaque aliquid. Doloribus nemo soluta voluptates repellat esse porro quo blanditiis, vero sapiente nisi natus aliquam dolorem aut et accusamus cupiditate animi suscipit odit perspiciatis eos consequatur in vitae sed. Perferendis voluptas nemo consequatur ad rerum nesciunt voluptatem quod, a culpa iusto et molestias, doloremque magni laborum rem maiores aperiam suscipit asperiores deleniti, adipisci perspiciatis? Voluptates accusamus velit quod officia placeat a saepe vel odit, minima autem similique rem eligendi dolores eius eveniet corporis libero cupiditate dicta. Asperiores distinctio, adipisci excepturi maiores mollitia odio labore, quidem placeat provident non quae? Corporis accusantium saepe nulla doloribus quod qui impedit ullam perferendis, dicta quidem explicabo, excepturi assumenda est ad hic eos, fuga labore velit commodi alias ea magni totam error. At, alias placeat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* -------------------- Contenedor --------------------- */
+
+  .container-about {
+    min-height: 540px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2rem auto;
+    background-color: var(--color-white);
+    max-width: var(--w-max);
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+
+  /* -------------------- Lado A : Imagen, rectangulo --------------------- */
+
+  .a-side {
+    background-color: rgba(186, 186, 186, 0.8);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .as-image {
+    margin: 2rem auto;
+    max-width: 200px;
+  }
+  .as-rect {
+    background-color: var(--color-lired);
+    min-height: 2rem;
+    width: 100%;
+  }
+
+  /* -------------------- Lado B : Titulo y Texto --------------------- */
+
+  .b-side {
+    background-color: rgba(84, 84, 84, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .bs-container-titulo {
+    min-height: 100px;
+    padding: 1rem;
+    align-self: center;
+  }
+
+  .bs-titulo {
+    color: var(--color-white);
+    padding-bottom: 2rem;
+    border-color: var(--color-violet);
+    border-bottom-width: 1rem;
+  }
+
+  .bs-container-about-p {
+  }
+  .bs-about-p {
+    color: var(--color-white);
+    padding: 1rem 2rem;
+  }
+
+  /* -------------------- Media query 768px --------------------- */
+
+  @media screen and (max-width: 768px) {
+    .container-about {
+      min-height: 480px;
+    }
+
+    .a-side {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  /* -------------------- Media query 600 px --------------------- */
+
+  @media screen and (max-width: 600px) {
+    .container-about {
+      min-height: fit-content;
+      grid-template-columns: 1fr;
+    }
+
+    .as-rect {
+        min-height: 100%;
+        width: 1.8rem;
+    }
+
+    .bs-container-titulo {
+      padding: 1rem;
+      align-self: center;
+    }
+
+    .bs-titulo {
+      border-bottom-width: 1.8rem;
+    }
+
+    .as-image {
+      max-width: 240px;
+    }
+  }
+
+  /* -------------------- Media query 425 px --------------------- */
+
+  @media screen and (max-width: 425px) {
+    .a-side {
+    }
+
+    .bs-container-titulo {
+      padding: 1rem;
+    }
+
+    .bs-titulo {
+      padding-bottom: 1rem;
+      border-bottom-width: 1rem;
+    }
+
+    .as-image {
+      max-width: 180px;
+    }
+
+ 
+  }
+</style>
